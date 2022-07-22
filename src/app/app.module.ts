@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './admin/components/dashboard/dashboard.component';
 import { MangeCategoriesComponent } from './admin/components/mange-categories/mange-categories.component';
 import { MangeOrdersComponent } from './admin/components/mange-orders/mange-orders.component';
@@ -26,11 +24,13 @@ import { ResourceNotFoundComponent } from './shared/resource-not-found/resource-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { NgxModule } from './shared/ngx/ngx.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminModule } from './admin/admin.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     DashboardComponent,
     MangeCategoriesComponent,
     MangeOrdersComponent,
@@ -56,7 +56,11 @@ import { NgxModule } from './shared/ngx/ngx.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-  
+    NgxModule,
+    ReactiveFormsModule,
+    FormsModule,
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
